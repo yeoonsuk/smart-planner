@@ -1,3 +1,16 @@
 spring:
+  # 애플리케이션 이름 설정
   application:
     name: smart-planner
+
+  # 데이터베이스 연결 설정
+  datasource:
+    # Supabase에서 복사한 Direct connection string을 큰따옴표("")로 감싸서 한 줄로 적어줍니다.
+    # ⚠️ [YOUR-PASSWORD] 부분은 대괄호까지 전부 지우고 진짜 DB 비밀번호를 적으셔야 합니다!
+    url: "jdbc:postgresql://db.dzqcskybkhccvmhxpwlw.supabase.co:5432/postgres"
+    # 데이터베이스 접속 계정 이름 (기본값: postgres)
+    username: postgres
+    # 데이터베이스 접속 비밀번호 (위 url에 적은 비밀번호와 동일하게 한 번 더 입력)
+    password: "SmartPlanner1234!"
+    # PostgreSQL 드라이버 클래스 지정
+    driver-class-name: org.postgresql.Driver
